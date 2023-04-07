@@ -16,13 +16,13 @@ const Header = () => {
         <div>
             <ul className="hidden lg:flex items-center space-x-8">
                 <li>
-                    <NavLink to='/' className=''>Home</NavLink>
+                    <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'default')} >Home</NavLink>
                 </li>
                 <li>
                     <NavLink to='/books' className=''>Books</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/contact' className=''>Contact</NavLink>
+                    <NavLink to='/contact' className={ ({ isActive })=> (isActive ? 'active' : 'default')}>Contact</NavLink>
                 </li>
                 <li>
                     <NavLink to='/about' className=''>About Us</NavLink>
