@@ -1,7 +1,13 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 
 const BookDetails = () => {
+  const navigation = useNavigation();
+  if(navigation.state === 'loading') {
+    return <LoadingSpinner />
+  }
+
   const bookDetails = useLoaderData();
   const [fold, setFold] = useState(true);
   const { image, title, authors, desc, price, publisher, rating, year, url } =

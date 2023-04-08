@@ -1,11 +1,16 @@
 import React from "react";
 import Lottie from "lottie-react";
 import render from "../assets/reading-boy.json";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import LoadingSpinner from "./LoadingSpinner";
 
 const Home = () => {
-  // className='max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none'
+  const navigation = useNavigation();
+  if(navigation.state === 'loading') {
+    return <LoadingSpinner />
+  }
+
   return (
     <div className="my-container flex flex-col items-center justify-between lg:flex-row">
       {/*g text content */}
