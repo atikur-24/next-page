@@ -5,9 +5,19 @@
 .my-container{
     @apply px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20
   }
+
+.badge{
+    @apply inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 bg-yellow-400 uppercase rounded-full
+}
+
+.btn{
+    @apply bg-blue-400 inline-flex h-12 items-center px-6 mb-3 font-medium transition duration-200 text-white rounded shadow-md md:mb-0 hover:bg-blue-700
+}
+
 .active {
     @apply font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-400
 }
+
 .default {
     @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400
 }
