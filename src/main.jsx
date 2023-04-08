@@ -13,11 +13,14 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Books from './components/Books';
 import BookDetails from './components/BookDetails';
+import LoadingSpinner from './components/LoadingSpinner';
+import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
