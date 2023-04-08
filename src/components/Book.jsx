@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Book = ({ book }) => {
   return (
-    <Link to='/book/bookId'>
+    <Link to={`/book/${book.isbn13}`}>
       <div className="relative overflow-hidden shadow-lg rounded hover:shadow-2xl transition duration-200 transform hover:-translate-y-2">
         <img
           src={book.image}
